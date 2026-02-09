@@ -18,6 +18,9 @@ app.use("/api/destinations", require("./routes/destinationRoutes"));
 app.use("/api/trips", require("./routes/tripRoutes"));
 app.use("/api/weather", require("./routes/weatherRoutes"));
 
-app.listen(5000, () => {
-  console.log("🚀 Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
+
